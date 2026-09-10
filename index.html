@@ -19,11 +19,31 @@
                 height: 100%;
                 object-fit: contain;
             }
+
+            .image-stack {
+                position: relative;
+                /* width: 800px; sme as the PNG dimensions, or use a responsive width */
+            }
+
+            .image-stack img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .image-stack .overlay {
+                position: absolute;
+                inset: 0; /* top/right/bottom/left: 0 */
+                pointer-events: none;
+            }
         </style>
 
         <title>All Abercrombie No Fitch</title>
     </head>
     <body>
-        <img src="/assets/images/phone.jpg" alt="rotary phone" />
+        <div class="image-stack">
+            <img src="/assets/images/phone.png" alt="Base image" />
+            <img class="overlay" src="/assets/images/dial.png" alt="" />
+        </div>
     </body>
 </html>
