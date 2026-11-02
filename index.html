@@ -2,21 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no"
+        />
 
         <style>
             html,
             body {
-                width: 100%;
-                height: 100%;
+                width: 100vw;
+                height: 100vh;
                 margin: 0;
                 overflow: hidden;
+                width: auto;
+                height: auto;
+                object-fit: contain;
             }
 
             img {
-                display: block;
-                width: 100%;
-                height: 100%;
+                max-width: 100vw;
+                max-height: 100vh;
+                width: auto;
+                height: auto;
                 object-fit: contain;
             }
 
@@ -36,6 +43,17 @@
                 inset: 0; /* top/right/bottom/left: 0 */
                 pointer-events: none;
             }
+
+            .circle {
+                position: fixed; /* or absolute, relative to nearest positioned ancestor */
+                top: 50%;
+                left: 50%;
+                transform: translate(-55%, -50%);
+                height: 25vw;
+                width: 25vw;
+                background-color: #55555555;
+                border-radius: 50%;
+            }
         </style>
 
         <title>All Abercrombie No Fitch</title>
@@ -45,5 +63,6 @@
             <img src="/assets/images/phone.png" alt="Base image" />
             <img class="overlay" src="/assets/images/dial.png" alt="" />
         </div>
+        <div class="circle"></div>
     </body>
 </html>
